@@ -1,20 +1,21 @@
 <%= form_for @petition do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :letter %><br />
-    <%= f.text_field :letter %>
-  </p>
-  <p>
-    <%= f.label :about %><br />
-    <%= f.text_field :about %>
-  </p>
-  <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :goal %><br />
+    <%= f.label :goal %> (how many signature do you want?)<br />
     <%= f.text_field :goal %>
+  </p>
+
+  <p>
+    <%= f.label :letter %><br />
+    <%= f.text_area :letter %>
+  </p>
+  <p>
+    <%= f.label :about %><br />
+    <%= f.text_field :about %>
   </p>
   <p><%= f.submit %></p>
 <% end %>
