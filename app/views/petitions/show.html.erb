@@ -1,0 +1,24 @@
+<% title "Petition" %>
+
+<p>
+  <strong>Letter:</strong>
+  <%= @petition.letter %>
+</p>
+<p>
+  <strong>About:</strong>
+  <%= @petition.about %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%= @petition.title %>
+</p>
+<p>
+  <strong>Goal:</strong>
+  <%= @petition.goal %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_petition_path(@petition) %> |
+  <%= link_to "Destroy", @petition, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", petitions_path %>
+</p>

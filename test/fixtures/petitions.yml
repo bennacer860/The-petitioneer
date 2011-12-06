@@ -1,0 +1,11 @@
+one:
+  letter: MyString
+  about: MyString
+  title: MyString
+  goal: 1
+
+two:
+  letter: MyString
+  about: MyString
+  title: MyString
+  goal: 1

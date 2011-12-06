@@ -1,0 +1,23 @@
+<% title "Petitions" %>
+
+<table>
+  <tr>
+    <th>Letter</th>
+    <th>About</th>
+    <th>Title</th>
+    <th>Goal</th>
+  </tr>
+  <% for petition in @petitions %>
+    <tr>
+      <td><%= petition.letter %></td>
+      <td><%= petition.about %></td>
+      <td><%= petition.title %></td>
+      <td><%= petition.goal %></td>
+      <td><%= link_to "Show", petition %></td>
+      <td><%= link_to "Edit", edit_petition_path(petition) %></td>
+      <td><%= link_to "Destroy", petition, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Petition", new_petition_path %></p>
