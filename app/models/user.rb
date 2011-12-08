@@ -9,5 +9,10 @@ class User < ActiveRecord::Base
 
   #relationsships
   has_many :petitions
+  #signatures
+  has_many :signatures
+  has_many :signed_petitions ,:through => :signatures , :class_name => 'Petitions' , :foreign_key => 'petition_id'
+
+
 
 end
